@@ -60,7 +60,8 @@
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
-        "enable_language_selector": false
+        "enable_language_selector": false,
+        "anchor_number": "(646) 892-9029"
       }
     },
     "header": {

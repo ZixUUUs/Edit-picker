@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Questrial&display=swap");
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -2189,6 +2189,7 @@ input[type="checkbox"] {
   height: 100%;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   flex-wrap: wrap;
   align-content: center;
   grid-area: announcements;
@@ -2282,6 +2283,9 @@ input[type="checkbox"] {
 }
 
 .announcement-bar__message {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
   padding: 1rem 0;
   margin: 0;

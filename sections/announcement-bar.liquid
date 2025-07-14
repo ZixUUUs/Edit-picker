@@ -148,25 +148,65 @@
             <div>
               <h2 class="visually-hidden" id="AnnouncementCountryLabel">{{ 'localization.country_label' | t }}</h2>
               {%- render 'country-localization', localPosition: 'AnnouncementCountry' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {% endif %}
+              </div>
+            {%- endform -%}
+            </localization-form>
+          {% endif %}
+          
+          {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+            <localization-form class="small-hide medium-hide">
+              {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
+                <div>
+                  <h2 class="visually-hidden" id="AnnouncementLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                  {%- render 'language-localization', localPosition: 'AnnouncementLanguage' -%}
+                  </div>
+                {%- endform -%}
+                </localization-form>
+              {%- endif -%}
+              </div>
+              
+              
+              <div class="number-container">
+                <div class="svg-phone">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect x="5" y="2.5" width="10" height="15" rx="2" stroke="black" stroke-linejoin="round"/>
+                   <path d="M8.3335 3.33333H11.6668" stroke="black" stroke-linecap="round"/> </svg>
+                </div>
+                {% if section.settings.anchor_number != blank %}
+                  <a href="tel: {{ section.settings.anchor_number }}">
+                     {{ section.settings.anchor_number }}
+                  </a>
+                {% endif %}
+                
+              </div>
+              </div>
+              </div>
+<style>
+  .number-container {
+    display: flex;
+    align-self: center;
+  }
+  .svg-phone {
+    align-self: flex-end;
+  }
+  .number-container a{
+    font-family: "Inter";
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+leading-trim: NONE;
+line-height: 19.2px;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
 
-      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-        <localization-form class="small-hide medium-hide">
-          {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="AnnouncementLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-              {%- render 'language-localization', localPosition: 'AnnouncementLanguage' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {%- endif -%}
-    </div>
-  </div>
-</div>
+  }
+  .number-container a, a:visited {
+    outline: none;
+    color: #000000;
 
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
@@ -232,6 +272,11 @@
       "default": false,
       "label": "t:sections.announcement-bar.settings.enable_language_selector.label",
       "info": "t:sections.announcement-bar.settings.enable_language_selector.info"
+    },
+    {
+      "type": "text",
+      "id": "anchor_number",
+      "label": "Phone number"
     }
   ],
   "blocks": [
