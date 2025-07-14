@@ -4,6 +4,7 @@
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+{{ 'style_footer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .footer {
@@ -195,7 +196,11 @@
                       required
                     >
                     <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                      {{ 'newsletter.label' | t }}
+                      
+                      <div class="email_image_footer">
+                        <img src="{{'email.svg'| asset_url  }}" alt="" width="100%" height="100%">
+                      </div>
+                      <p>Email address</p>
                     </label>
                     <button
                       type="submit"
@@ -204,9 +209,7 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      </span>
+                      sign up
                     </button>
                   </div>
                   {%- if form.errors -%}
@@ -246,10 +249,60 @@
             {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
         </div>
+
+       
+
+
       </div>
     {%- endunless -%}
   {%- endif -%}
-
+ <div class="section_options_footer">
+          <div class="div_options_footer">
+            <ul>
+              <li class="first_li">
+                <div class="li_div_footer">
+                <div class='image_option_footer'>
+                  <img src="{{ "img_footer1.svg" | asset_url }}" alt="" width="100%" height="100%">
+                </div>
+                <div>
+                <p class='first_p'>ALL MAJOR BRANDS</p>
+                <p>Up to 50% OFF</p>
+              </div></div>
+              </li>
+              <li>
+                <div class="li_div_footer">
+                <div class='image_option_footer'>
+                  <img src="{{ "img_footer2.svg" | asset_url }}" alt="" width="100%" height="100%">
+                </div>
+                <div>
+                <p class='first_p'>No Minimum</p>
+                <p>Free U.S. Shipping</p>
+              </div></div>
+              </li>
+              <li>
+                <div class="li_div_footer">
+                <div class='image_option_footer'>
+                  <img src="{{ "img_footer3.svg" | asset_url }}" alt="" width="100%" height="100%">
+                </div>
+                <div>
+                <p class='first_p'>HASSLE-FREE</p>
+                <p>30-day returns</p>
+              </div></div>
+              </li>
+              <li class="last_li">
+                <div class="li_div_footer">
+                <div class='image_option_footer'>
+                  <img src="{{ "img_footer4.svg" | asset_url }}" alt="" width="100%" height="100%">
+                </div>
+                <div>
+                  <p class='first_p'>5-star rated</p>
+                  <p>Customer Service</p>
+                </div></div>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
