@@ -14,15 +14,43 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_dCnwhE": {
+          "type": "announcement",
+          "settings": {
+            "text": "5-star Rated",
+            "link": "",
+            "img_svg": "shopify://shop_images/heart.webp"
+          }
+        },
+        "announcement_AzJkf3": {
+          "type": "announcement",
+          "settings": {
+            "text": "30-day returns",
+            "link": "",
+            "img_svg": "shopify://shop_images/arrows.webp"
+          }
+        },
+        "announcement_QEGrrD": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free U.S. Shipping",
+            "link": "",
+            "img_svg": "shopify://shop_images/truck.webp"
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "text": "Up to 50% OFF On All Brands",
+            "link": "",
+            "img_svg": "shopify://shop_images/Off50.webp"
           }
         }
       },
       "block_order": [
+        "announcement_dCnwhE",
+        "announcement_AzJkf3",
+        "announcement_QEGrrD",
         "announcement-bar-0"
       ],
       "settings": {

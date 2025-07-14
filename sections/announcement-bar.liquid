@@ -99,12 +99,17 @@
                         class="announcement-bar__link link link--text focus-inset animate-arrow"
                       >
                     {%- endif -%}
-                    <p class="announcement-bar__message h5">
+                    <div class="announcement-bar__message h5">
+                      <div class="announcement-bar-Svg">
+                        {% if block.settings.img_svg != blank %}
+                          <img  src="{{ block.settings.img_svg | image_url: width: block.settings.img_svg.width, height: block.settings.img_svg.height }}"  alt="SVG_Announcement" width="{{ block.settings.img_svg.width }}" height="{{ block.settings.img_svg.height }}" loading="lazy">
+                        {% endif %}
+                      </div>
                       <span>{{ block.settings.text | escape }}</span>
                       {%- if block.settings.link != blank -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}
-                    </p>
+                    </div>
                     {%- if block.settings.link != blank -%}
                       </a>
                     {%- endif -%}
@@ -244,6 +249,11 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_svg",
+          "label": "Icons for announcement"
         }
       ]
     }
