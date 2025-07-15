@@ -1,0 +1,23 @@
+{% if section.settings.logo_custom != blank %}
+<div class="container-Logo">
+  <img
+    src="{{
+      section.settings.logo_custom
+        | image_url : width : section.settings.logo_custom.width
+    }}"
+    width="{{ section.settings.logo_custom.width }}"
+    height="{{ section.settings.logo_custom.height }}"
+    alt="Logo Editers' Pick"
+    loading="lazy"
+  />
+</div>
+{%- else -%}
+<span class="h2">{{ shop.name }}</span>
+{% endif %}
+<style>
+  .container-Logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+</style>
