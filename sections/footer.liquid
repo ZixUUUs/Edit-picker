@@ -262,45 +262,181 @@
               <li class="first_li">
                 <div class="li_div_footer">
                 <div class='image_option_footer'>
+                  {%   if section.settings.img_options1 != blank%}
+                  <img src="{{ section.settings.img_options1 | img_url: 'master' }}" alt="" width="100%" height="100%">
+                  {% else %}
                   <img src="{{ "img_footer1.svg" | asset_url }}" alt="" width="100%" height="100%">
+                  {% endif %}
                 </div>
                 <div>
-                <p class='first_p'>ALL MAJOR BRANDS</p>
-                <p>Up to 50% OFF</p>
+                <p class='first_p'>
+                  {% if section.settings.P1_of_option1 != blank %}
+                    {{ section.settings.P1_of_option1 }}
+                  {% else %}
+                  ALL MAJOR BRANDS
+                  {% endif %}
+                </p>
+                <p>
+                  {% if section.settings.P2_of_option1 != blank %}
+                    {{ section.settings.P2_of_option1 }}
+                  {% else %}
+                  Up to 50% OFF
+                  {% endif %}
+                </p>
               </div></div>
               </li>
               <li>
                 <div class="li_div_footer">
                 <div class='image_option_footer'>
+                  {%   if section.settings.img_options2 != blank%}
+                  <img src="{{ section.settings.img_options2 | img_url: 'master' }}" alt="" width="100%" height="100%">
+                  {% else %}
                   <img src="{{ "img_footer2.svg" | asset_url }}" alt="" width="100%" height="100%">
+                    {% endif %}
                 </div>
                 <div>
-                <p class='first_p'>No Minimum</p>
-                <p>Free U.S. Shipping</p>
+                <p class='first_p'>
+                   {% if section.settings.P1_of_option2 != blank %}
+                    {{ section.settings.P1_of_option2 }}
+                  {% else %}
+                  No Minimum
+                  {% endif %}
+                </p>
+                <p>
+                   {% if section.settings.P2_of_option2 != blank %}
+                    {{ section.settings.P2_of_option2 }}
+                  {% else %}
+                  Free U.S. Shipping
+                  {% endif %}
+                </p>
               </div></div>
               </li>
               <li>
                 <div class="li_div_footer">
                 <div class='image_option_footer'>
+                   {%   if section.settings.img_options3 != blank%}
+                  <img src="{{ section.settings.img_options3 | img_url: 'master' }}" alt="" width="100%" height="100%">
+                  {% else %}
                   <img src="{{ "img_footer3.svg" | asset_url }}" alt="" width="100%" height="100%">
+                    {% endif %}
                 </div>
                 <div>
-                <p class='first_p'>HASSLE-FREE</p>
-                <p>30-day returns</p>
+                <p class='first_p'>
+                  {% if section.settings.P1_of_option3 != blank %}
+                    {{ section.settings.P1_of_option3 }}
+                  {% else %}
+                  HASSLE-FREE
+                  {% endif %}
+                </p>
+                <p>
+                  {% if section.settings.P2_of_option3 != blank %}
+                    {{ section.settings.P2_of_option3 }}
+                  {% else %}
+                  30-day returns
+                  {% endif %}
+                </p>
               </div></div>
               </li>
               <li class="last_li">
                 <div class="li_div_footer">
                 <div class='image_option_footer'>
+                  {%   if section.settings.img_options4 != blank%}
+                  <img src="{{ section.settings.img_options4 | img_url: 'master' }}" alt="" width="100%" height="100%">
+                  {% else %}
                   <img src="{{ "img_footer4.svg" | asset_url }}" alt="" width="100%" height="100%">
+                    {% endif %}
                 </div>
                 <div>
-                  <p class='first_p'>5-star rated</p>
-                  <p>Customer Service</p>
+                  <p class='first_p'>
+                     {% if section.settings.P1_of_option4 != blank %}
+                    {{ section.settings.P1_of_option4 }}
+                  {% else %}
+                    5-star rated
+                  {% endif %}
+                  </p>
+                  <p>
+                    {% if section.settings.P2_of_option4 != blank %}
+                    {{ section.settings.P2_of_option4 }}
+                  {% else %}
+                    Customer Service
+                    {% endif %}
+                  </p>
                 </div></div>
               </li>
              
             </ul>
+          </div>
+        </div>
+        <div class="section_links_footer">
+          <div class="links_group_footer">
+            <h3>
+              {% if section.settings.title1_links_group != blank %}
+                {{ section.settings.title1_links_group }}
+              {% else %}
+                Popular Brands
+              {% endif %}
+            </h3>
+            <ul>
+              {% for block in section.blocks %}
+                {% if block.type == 'href_group1' %}
+                <li>
+                  <a href="{{ block.settings.link_href1 }}">{{block.settings.name_link1 }}</a>
+                </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="links_group_footer">
+            <h3>
+              {% if section.settings.title2_links_group != blank %}
+                {{ section.settings.title2_links_group }}
+              {% else %}
+                Help
+              {% endif %}
+            </h3>
+            <ul>
+              {% for block in section.blocks %}
+                 {% if block.type == 'href_group2' %}
+                <li>
+                  <a href="{{ block.settings.link_href2 }}">{{block.settings.name_link2 }}</a>
+                </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="links_group_footer">
+            <h3>
+              {% if section.settings.title3_links_group != blank %}
+                {{ section.settings.title3_links_group }}
+              {% else %}
+                About Us
+              {% endif %}
+            </h3>
+            <ul>
+              {% for block in section.blocks %}
+                 {% if block.type == 'href_group3' %}
+                <li>
+                  <a href="{{ block.settings.link_href3 }}">{{block.settings.name_link3 }}</a>
+                </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="descrption_footer">
+            <h3>
+              {% if section.settings.title_descreption_footer != blank %}
+                {{ section.settings.title_descreption_footer }}
+              {% else %}
+                We Stand By Our Products
+              {% endif %}
+            </h3>
+            <p>
+              {% if section.settings.descreption_footer != blank %}
+                {{ section.settings.descreption_footer }}
+              {% else %}
+                We stand behind our products and trust you will be happy with your purchase. In the event you're not, we have a simple return policy. If you're not satisfied with any item, simply return it to us within 30 days.
+              {% endif %}
+            </p>
           </div>
         </div>
   <div
@@ -369,6 +505,38 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+      </div>
+      <div class="all_carts">
+        <div class="image_cart">
+          <img src="{{ 'cart1.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart2.png'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart3.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart4.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart5.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart6.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart7.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart8.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart9.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
+         <div class="image_cart">
+          <img src="{{ 'cart11.svg'| asset_url }}" alt="" width="100%" height="100%">
+        </div>
       </div>
     </div>
   </div>
@@ -472,6 +640,54 @@
             }
           ],
           "default": "center"
+        }
+      ]
+    },
+    {
+      "type": "href_group1",
+      "name": "link1",
+      "settings": [
+          {
+          "type": "url",
+          "id": "link_href1",
+          "label": "url"
+        },
+        {
+          "type": "text",
+          "id": "name_link1",
+          "label": "text"
+        }
+      ]
+    },
+     {
+      "type": "href_group2",
+      "name": "link2",
+      "settings": [
+          {
+          "type": "url",
+          "id": "link_href2",
+          "label": "url"
+        },
+        {
+          "type": "text",
+          "id": "name_link2",
+          "label": "text"
+        }
+      ]
+    },
+     {
+      "type": "href_group3",
+      "name": "link3",
+      "settings": [
+          {
+          "type": "url",
+          "id": "link_href3",
+          "label": "url"
+        },
+        {
+          "type": "text",
+          "id": "name_link3",
+          "label": "text"
         }
       ]
     }
@@ -582,7 +798,93 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "img_options1",
+      "label": "image1"
+    },
+    {
+      "type": "text",
+      "id": "P1_of_option1",
+      "label": "text1 up"
+    }, 
+    {
+      "type": "text",
+      "id": "P2_of_option1",
+      "label": "text1 down"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_options2",
+      "label": "image2"
+    },
+    {
+      "type": "text",
+      "id": "P1_of_option2",
+      "label": "text2 up"
+    }, 
+    {
+      "type": "text",
+      "id": "P2_of_option2",
+      "label": "text2 down"
+    },
+     {
+      "type": "image_picker",
+      "id": "img_options3",
+      "label": "image3"
+    },
+    {
+      "type": "text",
+      "id": "P1_of_option3",
+      "label": "text3 up"
+    }, 
+    {
+      "type": "text",
+      "id": "P2_of_option3",
+      "label": "text3 down"
+    },
+     {
+      "type": "image_picker",
+      "id": "img_options4",
+      "label": "image4"
+    },
+    {
+      "type": "text",
+      "id": "P1_of_option4",
+      "label": "text4 up"
+    }, 
+    {
+      "type": "text",
+      "id": "P2_of_option4",
+      "label": "text4 down"
+    },
+    {
+      "type":"text",
+      "id": "title1_links_group",
+      "label":"title of likns 1"
+    },
+    {
+      "type":"text",
+      "id": "title2_links_group",
+      "label":"title of likns 2"
+    },
+    {
+      "type":"text",
+      "id": "title3_links_group",
+      "label":"title of likns 3"
+    },
+    {
+      "type":"text",
+      "id": "title_descreption_footer",
+      "label":"title of descrption footer"
+    },
+    {
+      "type":"text",
+      "id": "descreption_footer",
+      "label":" descrption footer"
     }
+    
   ],
   "default": {
     "blocks": [
