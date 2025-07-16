@@ -1,0 +1,266 @@
+.footer__content-top {
+  background-color: #968061;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 1600px;
+}
+
+.footer-block--newsletter {
+  max-width: 750px;
+  margin: 0px auto;
+}
+
+.footer-block--newsletter h2 {
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+
+  line-height: 42px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 34px;
+}
+
+.field::before {
+  display: none;
+}
+.field::after {
+  display: none;
+}
+
+.field input {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  padding: 0px;
+  padding-left: 10px;
+  color: white;
+}
+.newsletter-form__button:not(:focus-visible):not(.focused) {
+  background-color: white;
+}
+.field button {
+  position: static;
+  height: 48px;
+  width: 109px;
+  padding: 12px 24px;
+  background-color: white;
+
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+.field label {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 10px;
+  top: 10px;
+  left: 10px;
+}
+
+.field label .email_image_footer {
+  width: 18px;
+  height: 14px;
+}
+
+.field label p {
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  color: white;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-top: 7px;
+}
+
+.field input:focus {
+  box-shadow: none;
+}
+.field__label {
+  opacity: 1;
+  transition: all 0.1s ease;
+}
+.field__input:focus ~ .field__label {
+  opacity: 0;
+}
+
+.section_options_footer {
+  max-width: 1600px;
+  background-color: #212121;
+  padding: 44px 80px;
+  margin: 0px auto;
+}
+
+.div_options_footer {
+  margin: 0px auto;
+  width: 90%;
+}
+
+.div_options_footer ul {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.div_options_footer ul li {
+  width: 25%;
+  border-right: 1px solid white;
+}
+
+.div_options_footer ul li .li_div_footer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 15px;
+  max-width: 200px;
+  margin: 0px auto;
+}
+
+.image_option_footer {
+  width: 44px;
+  height: 46px;
+}
+
+.div_options_footer ul li .li_div_footer div p {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  color: white;
+  line-height: 21px;
+  letter-spacing: 0.5%;
+  vertical-align: middle;
+  margin: 0px;
+}
+
+.div_options_footer ul li .li_div_footer div .first_p {
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  color: white;
+  line-height: 24px;
+  letter-spacing: 1px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.div_options_footer ul .first_li .li_div_footer {
+  margin-left: 0px;
+  max-width: 100%;
+}
+.div_options_footer ul .last_li .li_div_footer {
+  margin-right: 0px;
+}
+
+.div_options_footer ul .last_li {
+  border-right: none;
+}
+
+.section_links_footer {
+  max-width: 1600px;
+  background-color: #212121;
+  padding: 60px 80px;
+  margin: 0px auto;
+
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.links_group_footer {
+  width: 340px;
+}
+
+.descrption_footer {
+  width: 340px;
+}
+
+.links_group_footer h3,
+.descrption_footer h3 {
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 21px;
+  color: white;
+  line-height: 31px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+.links_group_footer ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.links_group_footer ul li a,
+.descrption_footer p {
+  text-decoration: none;
+  font-family: Inter;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 16px;
+  color: #bac0be;
+  line-height: 26px;
+  letter-spacing: 0.1px;
+}
+
+.footer__column {
+  display: none;
+}
+
+.footer__content-bottom {
+  max-width: 1600px;
+  background-color: #212121;
+  padding: 44px 80px;
+  margin: 0px auto;
+  border: none;
+}
+
+.footer__content-bottom-wrapper {
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+.footer__content-bottom-wrapper a,
+.footer__content-bottom-wrapper small {
+  font-family: Lato;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  color: white;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.all_carts {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  column-gap: 10px;
+}

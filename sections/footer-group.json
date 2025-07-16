@@ -13,10 +13,190 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "settings": {}
+      "blocks": {
+        "href_group1_AgPqpp": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "iS Clinical"
+          }
+        },
+        "href_group1_36mRzw": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Jan Marini"
+          }
+        },
+        "href_group1_PaMErC": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Keratin Complex"
+          }
+        },
+        "href_group1_jcT3F4": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Neocutis"
+          }
+        },
+        "href_group1_EMM8w6": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Obagi"
+          }
+        },
+        "href_group1_9dH86H": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Olaplex"
+          }
+        },
+        "href_group1_9d3zhP": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Revision"
+          }
+        },
+        "href_group1_MBMBpE": {
+          "type": "href_group1",
+          "settings": {
+            "link_href1": "#",
+            "name_link1": "Viviscal"
+          }
+        },
+        "href_group2_nm9hkX": {
+          "type": "href_group2",
+          "settings": {
+            "link_href2": "#",
+            "name_link2": "Rewards"
+          }
+        },
+        "href_group2_hXRNKe": {
+          "type": "href_group2",
+          "settings": {
+            "link_href2": "#",
+            "name_link2": "Subscriptions"
+          }
+        },
+        "href_group2_bkX8tP": {
+          "type": "href_group2",
+          "settings": {
+            "link_href2": "#",
+            "name_link2": "Shipping"
+          }
+        },
+        "href_group2_UrcGQ4": {
+          "type": "href_group2",
+          "settings": {
+            "link_href2": "#",
+            "name_link2": "Returns"
+          }
+        },
+        "href_group2_PPKATE": {
+          "type": "href_group2",
+          "settings": {
+            "link_href2": "#",
+            "name_link2": "Contact Us"
+          }
+        },
+        "href_group3_nLL7z8": {
+          "type": "href_group3",
+          "settings": {
+            "link_href3": "#",
+            "name_link3": "Our Story"
+          }
+        },
+        "href_group3_UU3ABr": {
+          "type": "href_group3",
+          "settings": {
+            "link_href3": "#",
+            "name_link3": "Reviews"
+          }
+        },
+        "href_group3_xULfwM": {
+          "type": "href_group3",
+          "settings": {
+            "link_href3": "#",
+            "name_link3": "Privacy and Security"
+          }
+        },
+        "href_group3_dqppBE": {
+          "type": "href_group3",
+          "settings": {
+            "link_href3": "#",
+            "name_link3": "Terms & Conditions"
+          }
+        },
+        "href_group3_LFieMU": {
+          "type": "href_group3",
+          "settings": {
+            "link_href3": "#",
+            "name_link3": "Refund Policy"
+          }
+        },
+        "href_group3_CcaNj7": {
+          "type": "href_group3",
+          "settings": {
+            "link_href3": "#",
+            "name_link3": "Sitemap"
+          }
+        }
+      },
+      "block_order": [
+        "href_group1_AgPqpp",
+        "href_group1_36mRzw",
+        "href_group1_PaMErC",
+        "href_group1_jcT3F4",
+        "href_group1_EMM8w6",
+        "href_group1_9dH86H",
+        "href_group1_9d3zhP",
+        "href_group1_MBMBpE",
+        "href_group2_nm9hkX",
+        "href_group2_hXRNKe",
+        "href_group2_bkX8tP",
+        "href_group2_UrcGQ4",
+        "href_group2_PPKATE",
+        "href_group3_nLL7z8",
+        "href_group3_UU3ABr",
+        "href_group3_xULfwM",
+        "href_group3_dqppBE",
+        "href_group3_LFieMU",
+        "href_group3_CcaNj7"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
+        "newsletter_heading": "Get updates on new products launches and exclusive promotions.",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "P1_of_option1": "",
+        "P2_of_option1": "",
+        "P1_of_option2": "",
+        "P2_of_option2": "",
+        "P1_of_option3": "",
+        "P2_of_option3": "",
+        "P1_of_option4": "",
+        "P2_of_option4": "",
+        "title1_links_group": "",
+        "title2_links_group": "",
+        "title3_links_group": "",
+        "title_descreption_footer": "",
+        "descreption_footer": ""
+      }
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["footer"]
 }
