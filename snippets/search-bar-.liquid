@@ -1,0 +1,112 @@
+<div class="search-bar-container">
+  <div class="form-input">
+    <form
+      action="{{ routes.search_url }}"
+      method="get"
+      role="search"
+      class="custom-search-bar"
+    >
+      <div class="custom-field">
+        <input
+          class="search-input"
+          id="{{ input_id }}"
+          type="search"
+          name="q"
+          value="{{ search.terms | escape }}"
+          placeholder="Search products, brands"
+          {%-
+          if
+          settings.predictive_search_enabled
+          -%}
+          role="combobox"
+          aria-expanded="false"
+          aria-owns="predictive-search-results"
+          aria-controls="predictive-search-results"
+          aria-haspopup="listbox"
+          aria-autocomplete="list"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+          {%-
+          endif
+          -%}
+        />
+
+        <input type="hidden" name="options[prefix]" value="last" />
+        <button
+          type="reset"
+          class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+          aria-label="{{ 'general.search.reset' | t }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-reset.svg' | inline_asset_content -}}
+          </span>
+        </button>
+        <button
+          class="search__button-custom"
+          aria-label="{{ 'general.search.search' | t }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-search.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      </div>
+
+      {%- if settings.predictive_search_enabled -%}
+      <div
+        class="predictive-search predictive-search--header"
+        tabindex="-1"
+        data-predictive-search
+      ></div>
+
+      <span
+        class="predictive-search-status visually-hidden"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      {%- endif -%}
+    </form>
+  </div>
+</div>
+
+<style>
+  .custom-field {
+    outline: none;
+    display: flex;
+    max-width: 100%;
+    min-height: 46px;
+    border-bottom: 1px solid #a1a6a4;
+  }
+  .custom-field input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 11px 12px;
+    outline: none;
+  }
+  .custom-field input:focus,
+  input::after,
+  input::before {
+    outline: none;
+  }
+  .custom-field input::placeholder {
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #212121;
+  }
+  .search__button-custom {
+    position: relative;
+    top: -5px;
+    left: 0;
+    border: none;
+    background-color: #ffffff;
+  }
+</style>
