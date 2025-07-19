@@ -5,6 +5,7 @@
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {{ 'style_footer.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'javascript_footer.js' | asset_url }}" defer></script>
 
 {%- style -%}
   .footer {
@@ -28,7 +29,7 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer footer_class_group color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -368,13 +369,14 @@
           </div>
         </div>
         <div class="section_links_footer">
-          <div class="links_group_footer">
-            <h3>
+          <div class="links_group_footer" id="id_div1">
+            <h3  onclick="openListLinks(div1,span1,Theheight1)">
               {% if section.settings.title1_links_group != blank %}
                 {{ section.settings.title1_links_group }}
               {% else %}
                 Popular Brands
               {% endif %}
+              <span id="span_div1"><img src="{{ 'arrow-footer.svg' | asset_url }}" alt="" width="20px" height="20px"></span>
             </h3>
             <ul>
               {% for block in section.blocks %}
@@ -386,13 +388,14 @@
               {% endfor %}
             </ul>
           </div>
-          <div class="links_group_footer">
-            <h3>
+          <div class="links_group_footer" id="id_div2">
+            <h3 onclick="openListLinks(div2,span2,Theheight2)">
               {% if section.settings.title2_links_group != blank %}
                 {{ section.settings.title2_links_group }}
               {% else %}
                 Help
               {% endif %}
+              <span id="span_div2"><img src="{{ 'arrow-footer.svg' | asset_url }}" alt="" width="20px" height="20px"></span>
             </h3>
             <ul>
               {% for block in section.blocks %}
@@ -404,13 +407,14 @@
               {% endfor %}
             </ul>
           </div>
-          <div class="links_group_footer">
-            <h3>
+          <div class="links_group_footer" id="id_div3">
+            <h3 onclick="openListLinks(div3,span3,Theheight3)">
               {% if section.settings.title3_links_group != blank %}
                 {{ section.settings.title3_links_group }}
               {% else %}
                 About Us
               {% endif %}
+              <span id="span_div3"><img src="{{ 'arrow-footer.svg' | asset_url }}" alt="" width="20px" height="20px"></span>
             </h3>
             <ul>
               {% for block in section.blocks %}

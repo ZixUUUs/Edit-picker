@@ -1,3 +1,8 @@
+.footer_class_group {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
 .footer__content-top {
   background-color: #968061;
   padding-top: 60px;
@@ -234,7 +239,7 @@
 .footer__content-bottom {
   max-width: 1600px;
   background-color: #212121;
-  padding: 44px 80px;
+  padding: 22px 80px;
   margin: 0px auto;
   border: none;
 }
@@ -263,4 +268,345 @@
   align-items: end;
   justify-content: end;
   column-gap: 10px;
+}
+
+.links_group_footer h3 span {
+  display: none;
+}
+
+@media (max-width: 1450px) {
+  .section_options_footer {
+    padding: 44px 60px;
+  }
+  .section_links_footer {
+    padding: 44px 60px;
+  }
+  .footer__content-bottom {
+    padding: 22px 60px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .section_options_footer {
+    padding: 34px 40px;
+  }
+  .section_links_footer {
+    padding: 34px 40px;
+  }
+  .section_options_footer {
+    padding: 34px 40px;
+  }
+  .footer__content-bottom {
+    padding: 22px 40px;
+  }
+
+  .footer-block__newsletter h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .image_option_footer {
+    width: 34px;
+    height: 36px;
+  }
+
+  .div_options_footer ul li .li_div_footer div p {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .div_options_footer ul li .li_div_footer div .first_p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .links_group_footer h3,
+  .descrption_footer h3 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .links_group_footer ul li a,
+  .descrption_footer p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .footer__content-bottom-wrapper a,
+  .footer__content-bottom-wrapper small {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 990px) {
+  .section_options_footer {
+    padding: 24px 20px;
+  }
+  .section_links_footer {
+    padding: 24px 20px;
+    flex-direction: column;
+  }
+  .section_options_footer {
+    padding: 24px 20px;
+  }
+  .footer__content-bottom {
+    padding: 22px 20px;
+  }
+
+  .footer__content-top {
+    padding: 34px 20px;
+  }
+
+  .footer-block--newsletter {
+    max-width: 400px;
+  }
+
+  .footer-block__newsletter h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .div_options_footer ul li .li_div_footer div p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .div_options_footer ul li .li_div_footer div .first_p {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .links_group_footer,
+  .descrption_footer {
+    width: 100%;
+    border-bottom: 1px solid #bac0be;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .links_group_footer {
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .links_group_footer h3 {
+    position: relative;
+  }
+  .links_group_footer h3 span {
+    position: absolute;
+    top: 0px;
+    left: 97%;
+    display: block;
+  }
+
+  .links_group_footer h3,
+  .descrption_footer h3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .links_group_footer ul li a,
+  .descrption_footer p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .footer__content-bottom-wrapper a,
+  .footer__content-bottom-wrapper small {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .image_cart {
+    width: 38px;
+    height: 20px;
+  }
+  .div_options_footer ul li {
+    border: none;
+    width: 50%;
+  }
+  .div_options_footer {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+  }
+  .div_options_footer ul {
+    justify-content: start;
+    width: 200%;
+    margin-left: 25%;
+    animation: slider_options 8s linear infinite; /* Runs once */
+  }
+
+  .div_options_footer ul li .li_div_footer {
+    justify-content: center;
+  }
+  .div_options_footer ul .last_li .li_div_footer {
+    margin-right: auto;
+  }
+  @keyframes slider_options {
+    0% {
+      transform: translateX(0%);
+    }
+    1% {
+      transform: translateX(0%);
+    }
+
+    23% {
+      transform: translateX(-25%);
+    }
+
+    25% {
+      transform: translateX(-25%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    55% {
+      transform: translateX(-50%);
+    }
+
+    70% {
+      transform: translateX(-75%);
+    }
+    75% {
+      transform: translateX(-75%);
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .footer__content-top {
+    padding: 20px 10px;
+  }
+
+  .footer-block__newsletter h2 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+
+  .field button {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 8px 16px;
+    height: 34px;
+  }
+  .field {
+    align-items: end;
+  }
+  .div_options_footer ul {
+    width: 1600px;
+  }
+
+  .section_options_footer {
+    padding: 20px 10px;
+  }
+  @keyframes slider_options {
+    0% {
+      transform: translateX(0%);
+    }
+    5% {
+      transform: translateX(0%);
+    }
+
+    23% {
+      transform: translateX(-27%);
+    }
+
+    25% {
+      transform: translateX(-27%);
+    }
+    50% {
+      transform: translateX(-53%);
+    }
+    55% {
+      transform: translateX(-53%);
+    }
+
+    70% {
+      transform: translateX(-78%);
+    }
+    75% {
+      transform: translateX(-78%);
+    }
+  }
+
+  .links_group_footer h3,
+  .descrption_footer h3 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+  }
+
+  .links_group_footer ul li a,
+  .descrption_footer p {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .section_links_footer {
+    padding: 20px 10px;
+  }
+
+  .footer__content-bottom.scroll-trigger.animate--slide-in {
+    padding: 10px 10px;
+  }
+  .footer__copyright {
+    margin-top: 0px;
+  }
+
+  .all_carts {
+    column-gap: 3px;
+  }
+  .footer__content-bottom-wrapper a,
+  .footer__content-bottom-wrapper small {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .links_group_footer h3 span {
+    left: 96%;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-block__newsletter h2 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .div_options_footer ul {
+    margin-left: 0%;
+  }
+
+  @keyframes slider_options {
+    0% {
+      transform: translateX(0%);
+    }
+    5% {
+      transform: translateX(0%);
+    }
+
+    23% {
+      transform: translateX(-25%);
+    }
+
+    25% {
+      transform: translateX(-25%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    55% {
+      transform: translateX(-50%);
+    }
+
+    70% {
+      transform: translateX(-75%);
+    }
+    75% {
+      transform: translateX(-75%);
+    }
+  }
+  .all_carts {
+    display: none;
+  }
 }
