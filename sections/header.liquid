@@ -3,6 +3,7 @@
   href="{{ 'component-list-menu.css' | asset_url }}"
   media="print"
   onload="this.media='all'">
+
 <link
   rel="stylesheet"
   href="{{ 'component-search.css' | asset_url }}"
@@ -98,6 +99,74 @@
     }
   }
 </style>
+<style>
+  @media screen and (max-width: 1600px) {
+    .header__heading img {
+      max-width: 237px;
+    }
+
+    .page-width-custom {
+      max-width: 100%;
+      margin: 0 60px;
+      padding: 0 80px
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    .page-width-custom {
+      max-width: 100%;
+      padding: 0 40px;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 990px) {
+
+    .header--mobile-center {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 20px;
+
+    }
+    .search-bar {
+      grid-area: unset;
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+    }
+    .header__heading {
+      grid-area: unset;
+      justify-self: self-start;
+      place-self: center;
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+
+    .header__icons {
+
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+
+    }
+
+    .header__icons svg {
+      width: 30px;
+      height: 30px;
+    }
+    .page-width-custom {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .header__icons svg {
+      width: 20px;
+      height: 20px;
+    }
+    .header__heading {
+min-width: 120px;
+    }
+    
+  }
+</style>
 
 {%- style -%}
   .header {
@@ -124,6 +193,7 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -145,10 +215,10 @@
 %}
 
 <{{ header_tag }}
-      {% if header_tag == 'sticky-header' %}
-        data-sticky-type="{{ section.settings.sticky_header_type }}"
-      {% endif %}
-      class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
+                  {% if header_tag == 'sticky-header' %}
+                    data-sticky-type="{{ section.settings.sticky_header_type }}"
+                  {% endif %}
+                  class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
   >
   {%- liquid
     assign social_links = false
@@ -163,14 +233,10 @@
     endif
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width-custom {% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
-    
-  {%- liquid
+
+    {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
-      endif
-
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
       endif
     -%}
 
@@ -179,9 +245,9 @@
         <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        
-          {% render "logo-img" %}
-        
+
+        {% render "logo-img" %}
+
       </a>
       {%- if request.page_type == 'index' -%}
         </h1>
@@ -200,9 +266,11 @@
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       <div class="search-bar">
-              {% render 'search-bar-'
-        , input_id: 'Search-In-Modal' %}
+        {% render 'search-bar-'
+          , input_id: 'Search-In-Modal' %}
       </div>
+
+
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
@@ -298,9 +366,11 @@
             {%- endif -%}
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
+
         {%- endif -%}
       </a>
     </div>
+
   </header>
 </{{ header_tag }}>
 
@@ -310,6 +380,7 @@
     , desktop_menu_type: section.settings.menu_type_desktop
   -%}
 {%- endif -%}
+
 
 {% javascript %}
   class StickyHeader extends HTMLElement {
@@ -375,6 +446,7 @@
         if (this.preventHide) return;
         
 
+
         requestAnimationFrame(this.hide.bind(this));
       } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.header.classList.add('scrolled-past-header');
@@ -401,6 +473,7 @@
       if (this.headerIsAlwaysSticky) return;
       
 
+
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
@@ -410,6 +483,7 @@
       if (this.headerIsAlwaysSticky) return;
       
 
+
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
     }
@@ -417,6 +491,7 @@
     reset() {
       if (this.headerIsAlwaysSticky) return;
       
+
 
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
     }
@@ -474,6 +549,7 @@
     }
   </script>
 {%- endif -%}
+
 
 {% schema %}
   {

@@ -2381,6 +2381,7 @@ input[type="checkbox"] {
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
+  padding: 20px;
 }
 
 .header-wrapper--border-bottom {
@@ -2389,9 +2390,9 @@ input[type="checkbox"] {
 
 .header {
   display: grid;
-  grid-template-areas: "left-icons heading icons";
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  align-self: center;
 }
 
 @media screen and (max-width: 749px) {
