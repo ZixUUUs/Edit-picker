@@ -162,9 +162,9 @@
       height: 20px;
     }
     .header__heading {
-min-width: 120px;
+      min-width: 120px;
     }
-    
+
   }
 </style>
 
@@ -215,10 +215,10 @@ min-width: 120px;
 %}
 
 <{{ header_tag }}
-                  {% if header_tag == 'sticky-header' %}
-                    data-sticky-type="{{ section.settings.sticky_header_type }}"
-                  {% endif %}
-                  class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
+                    {% if header_tag == 'sticky-header' %}
+                      data-sticky-type="{{ section.settings.sticky_header_type }}"
+                    {% endif %}
+                    class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
   >
   {%- liquid
     assign social_links = false
@@ -323,6 +323,7 @@ min-width: 120px;
             <account-icon>
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
+
               {%- else -%}
                 <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
               {%- endif -%}
