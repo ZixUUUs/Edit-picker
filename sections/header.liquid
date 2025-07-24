@@ -100,6 +100,40 @@
   }
 </style>
 <style>
+  .mega-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 12px;
+    background-color: #212121;
+}
+.header__inline-menu {
+  width: 80%;
+
+}
+.list-menu.list-menu--inline {
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+}
+.list-menu.list-menu--inline li a,a:visited {
+  color:none;
+  outline:none;
+}
+.list-menu.list-menu--inline li a span {
+  font-family: "Questrial";
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 24px;
+letter-spacing: 1px;
+vertical-align: middle;
+text-transform: uppercase;
+color: #ffffff;
+
+}
   @media screen and (max-width: 1600px) {
     .header__heading img {
       max-width: 237px;
@@ -119,6 +153,9 @@
     }
   }
   @media screen and (max-width: 990px) {
+    .mega-nav {
+      display:none;
+    }
 
     .header--mobile-center {
       display: grid;
@@ -215,10 +252,10 @@
 %}
 
 <{{ header_tag }}
-                    {% if header_tag == 'sticky-header' %}
-                      data-sticky-type="{{ section.settings.sticky_header_type }}"
-                    {% endif %}
-                    class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
+                        {% if header_tag == 'sticky-header' %}
+                          data-sticky-type="{{ section.settings.sticky_header_type }}"
+                        {% endif %}
+                        class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"
   >
   {%- liquid
     assign social_links = false
@@ -254,15 +291,6 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- liquid
-      if section.settings.menu != blank
-        if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
-        elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
-        endif
-      endif
-    %}
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       <div class="search-bar">
@@ -374,6 +402,19 @@
 
   </header>
 </{{ header_tag }}>
+
+<nav class="mega-nav">
+    {%- liquid
+      if section.settings.menu != blank
+        if section.settings.menu_type_desktop == 'dropdown'
+          render 'header-dropdown-menu'
+        elsif section.settings.menu_type_desktop != 'drawer'
+          render 'header-mega-menu'
+        endif
+      endif
+    %}
+</nav>
+
 
 {%- if settings.cart_type == 'notification' -%}
   {%- render 'cart-notification'
