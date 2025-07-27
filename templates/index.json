@@ -31,10 +31,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["heading", "button"],
       "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
@@ -77,10 +74,11 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "New_image_banner": {
+      "type": "New_image_banner",
+      "settings": {}
     }
   },
-  "order": [
-    "image_banner",
-    "featured_collection"
-  ]
+  "order": ["image_banner", "featured_collection", "New_image_banner"]
 }
