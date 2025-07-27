@@ -78,7 +78,29 @@
     "New_image_banner": {
       "type": "New_image_banner",
       "settings": {}
+    },
+    "ep_shop_by_categorie_UCDViH": {
+      "type": "ep__shop--by--categorie",
+      "blocks": {
+        "categories_nPyGMq": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/18f891ee64087f9c6dc1fbf7ab85105c9d207821.png",
+            "category_type": "skin care"
+          }
+        }
+      },
+      "block_order": ["categories_nPyGMq"],
+      "name": "ep__shope-by-categorie",
+      "settings": {
+        "categories_title": ""
+      }
     }
   },
-  "order": ["image_banner", "featured_collection", "New_image_banner"]
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "New_image_banner",
+    "ep_shop_by_categorie_UCDViH"
+  ]
 }
