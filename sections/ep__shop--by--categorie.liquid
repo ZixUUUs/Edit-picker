@@ -1,3 +1,9 @@
+<!-- Required Core Stylesheet -->
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+  <!-- Optional Theme Stylesheet -->
+<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+
 <section class="ep__shop--by--categorie">
   <div class="padding-container ep__shop--by--categorie-container">
     {%- if section.settings.categories_title != blank -%}
@@ -18,6 +24,11 @@
     </div>
   </div>
 </section>
+<script src="node_modules/@glidejs/glide/dist/glide.min.js" defer></script>
+
+<script defer>
+  new Glide('.glide').mount()
+</script>
 <style>
   .ep__shop--by--categorie {
     display: flex;
