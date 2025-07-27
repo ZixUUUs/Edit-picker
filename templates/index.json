@@ -31,7 +31,10 @@
           }
         }
       },
-      "block_order": ["heading", "button"],
+      "block_order": [
+        "heading",
+        "button"
+      ],
       "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
@@ -77,8 +80,56 @@
     },
     "New_image_banner": {
       "type": "New_image_banner",
-      "settings": {}
+      "settings": {
+        "banner_H1": "",
+        "banner_P": "",
+        "banner_href": "",
+        "banner_url": ""
+      }
+    },
+    "section_skin_care": {
+      "type": "section_skin_care",
+      "blocks": {
+        "product_WektUf": {
+          "type": "product",
+          "settings": {
+            "product": "face-cleansers"
+          }
+        },
+        "product_eAUWAJ": {
+          "type": "product",
+          "settings": {
+            "product": "toners"
+          }
+        },
+        "product_iHmVpa": {
+          "type": "product",
+          "settings": {
+            "product": "serums"
+          }
+        },
+        "product_ctLpdC": {
+          "type": "product",
+          "settings": {
+            "product": "face-moisturizers"
+          }
+        }
+      },
+      "block_order": [
+        "product_WektUf",
+        "product_eAUWAJ",
+        "product_iHmVpa",
+        "product_ctLpdC"
+      ],
+      "settings": {
+        "title_section": ""
+      }
     }
   },
-  "order": ["image_banner", "featured_collection", "New_image_banner"]
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "New_image_banner",
+    "section_skin_care"
+  ]
 }

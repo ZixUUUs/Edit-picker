@@ -1,0 +1,116 @@
+.section_skin_care {
+  max-width: 1600px;
+  margin: 0px auto;
+}
+.div_skin_care {
+  width: 100%;
+  padding: 90px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_skin_care h2 {
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 32px;
+  color: black;
+  line-height: 42px;
+  letter-spacing: 1px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 40px;
+}
+
+.section_skin_care ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.section_skin_care ul li a .image_product {
+  max-height: 300px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.section_skin_care ul li a .image_product img {
+  transition: all 0.3s ease;
+}
+
+.section_skin_care ul li a {
+  text-decoration: none;
+
+  font-family: Questrial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  color: black;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: start;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin: 20px;
+}
+.section_skin_care ul li a:hover .image_product img {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1450px) {
+  .div_skin_care {
+    padding: 90px 60px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .div_skin_care {
+    padding: 90px 40px;
+  }
+}
+
+@media (max-width: 990px) {
+  .div_skin_care {
+    padding: 70px 20px;
+  }
+  .section_skin_care ul {
+    flex-wrap: wrap;
+  }
+  .section_skin_care li {
+    width: 48%;
+  }
+  .section_skin_care ul li a {
+    width: 100%;
+  }
+
+  .section_skin_care ul li a p {
+    margin-bottom: 0px;
+  }
+
+  .section_skin_care ul li a .image_product {
+    max-width: 100%;
+    max-height: 400%;
+  }
+}
+
+@media (max-width: 750px) {
+  .section_skin_care li {
+    width: 90%;
+  }
+
+  .section_skin_care h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .section_skin_care ul li a {
+    font-size: 16px;
+  }
+}

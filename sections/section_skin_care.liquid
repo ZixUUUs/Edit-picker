@@ -1,0 +1,67 @@
+{{ 'style_section_skin_care.css' | asset_url | stylesheet_tag }}
+
+<section class="section_skin_care">
+  <div class="div_skin_care">
+    <h2>
+        {% if section.settings.title_section != blank %}
+            {{ section.settings.title_section | upcase}}
+        {% else %}
+            SHOP SKIN CARE
+        {% endif %}
+    </h2>
+    <ul>
+        {% for block in section.blocks %}
+          {% assign product = block.settings.product %}
+            {% if product %}
+            <li>
+                <a href="{{ product.url }}">
+                <div class="image_product">
+                    <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}" width="100%" height="100%">
+                </div>
+                <p>{{ product.title | upcase }}</p></a>
+            </li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+</div>
+</section>
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Featured Products Block",
+  "max_blocks": 4,
+  "settings": [
+    {
+        "type": "text",
+      "id": "title_section",
+      "label": "title"
+        
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product Block",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products Block",
+      "category": "Products"
+    }
+  ]
+}
+{% endschema %}
