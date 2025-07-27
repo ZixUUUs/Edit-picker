@@ -87,10 +87,58 @@
             "category_img": "shopify://shop_images/18f891ee64087f9c6dc1fbf7ab85105c9d207821.png",
             "category_type": "skin care"
           }
+        },
+        "categories_fdXr66": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/11e01b1ab5d38331b041de67171b9cd8e87fc1cf.png",
+            "category_type": "Hair Care"
+          }
+        },
+        "categories_8PRBd3": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/76496dfe33438eaa63a22b17b9b7696fbf7aa390.png",
+            "category_type": "makeup"
+          }
+        },
+        "categories_EUjKfb": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/de88666c74bcbef446ba50276732a795f0e36346.png",
+            "category_type": "Bath & Body"
+          }
+        },
+        "categories_kUBMdy": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/aa1bc6ef859ccf6ece6c3425d90fe5a1095734de.png",
+            "category_type": "Fragnance"
+          }
+        },
+        "categories_iK9iEX": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/3bf80ea0dcd8205723f5153da5bc17e94187525e.png",
+            "category_type": "Tools & Devices"
+          }
+        },
+        "categories_HTDBgP": {
+          "type": "categories",
+          "settings": {
+            "category_img": "shopify://shop_images/995f4dd26952435249b6ce15d394329172e8db96.png",
+            "category_type": "Home"
+          }
         }
       },
       "block_order": [
-        "categories_nPyGMq"
+        "categories_nPyGMq",
+        "categories_fdXr66",
+        "categories_8PRBd3",
+        "categories_EUjKfb",
+        "categories_kUBMdy",
+        "categories_iK9iEX",
+        "categories_HTDBgP"
       ],
       "name": "ep__shope-by-categorie",
       "settings": {
